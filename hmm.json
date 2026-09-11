@@ -27,7 +27,7 @@
     {
       "name": "hxcpp",
       "type": "git",
-      "ref": "master",
+      "ref": "424af58f9dc9eaf4195fdf567221b4a97c880874",
       "url": "https://github.com/MRK2009/hxcpp-shadow"
     },
     {
