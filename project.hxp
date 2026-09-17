@@ -256,6 +256,14 @@ class Project extends HXProject
 
 		setHaxedef("HXCPP_GC_BIG_BLOCKS"); // still totally unsure btw!
 
+		if (isFinal())
+		{
+			if (!isWindows() || targetFlags.exists("mingw") || defines.exists("HXCPP_MINGW"))
+				setHaxedef("HXCPP_LTO_THIN");
+			else
+				setHaxedef("HXCPP_OPTIMIZE_LINK");
+		}
+
 		setHaxedef("USING_SHADOW_ENGINE");
 
 		if (FEATURE_DCE.isDisabled())
